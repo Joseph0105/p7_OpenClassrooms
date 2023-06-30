@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import DetailsLogement from "./pages/DetailsLogement";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -12,6 +13,7 @@ const App: React.FC = () => {
             <main>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
+                    <Route path="/logement/:id" element={<DetailsLogement />} />
 
                 </Routes>
             </main>

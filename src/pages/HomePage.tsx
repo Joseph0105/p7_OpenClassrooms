@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Banner from "../components/Banner";
 import Cards from "../components/Cards";
-
-interface Logement {
-    id: number;
-    cover: string;
-    title: string;
-}
+import { Link } from "react-router-dom";
+import { Logement } from "../interfaces/Logement";
 
 const Home = () => {
     const [data, setData] = useState<Logement[]>([]);
@@ -22,9 +18,13 @@ const Home = () => {
     return (
         <>
             <Banner />
-            <div className="">
-                {data.map((appart: Logement) => (
-                    <Cards cover={appart.cover} title={appart.title} key={appart.id} />
+            <div className="cardsContainer">
+                {data.map((appart, id) => (
+                    <div className="cardLogement" key={id}>
+                        <Link className="link_card_logement" to={`/logement/${appart.id}`}>
+                            <Cards cover={appart.cover} title={appart.title} />
+                        </Link>
+                    </div>
                 ))}
             </div>
         </>
