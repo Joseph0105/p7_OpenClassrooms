@@ -1,17 +1,16 @@
 import React from "react";
+// Interfaces
+import { CardProps } from "../interfaces/Card"
+// Styles
 import styles from "./Cards.module.css";
 
-interface CardProps {
-    cover: string;
-    title: string;
-}
 
 const Card: React.FC<CardProps> = ({ cover, title }) => {
     return (
-        <article className={styles.bg} >
+        <article className={styles.cardLogement} >
             <img src={cover} alt="location" />
-            <div >
-                <p >{title}</p>
+            <div className={styles.cardLogementLayer}>
+                <p className={styles.cardLogementTitle}>{title}</p>
             </div>
         </article>
     );

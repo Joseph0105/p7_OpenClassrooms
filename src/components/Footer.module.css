@@ -1,0 +1,41 @@
+:root {
+    --footer-color: #000000;
+    --tertiary-color: #f1f1f1;
+}
+
+.footContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 209px;
+    margin-top: 5%;
+    background-color: var(--footer-color);
+    flex-direction: column;
+}
+
+.footContainerText {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: var(--tertiary-color);
+    width: 100%;
+    margin: 4% 0 3% 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .footContainerText {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+.footContainer img {
+    margin-top: 2%;
+    width: 122px;
+    height: 40px;
+}

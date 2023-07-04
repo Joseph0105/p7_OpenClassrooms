@@ -1,7 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+// Pages
 import HomePage from "./pages/HomePage";
 import DetailsLogement from "./pages/DetailsLogement";
+// Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 

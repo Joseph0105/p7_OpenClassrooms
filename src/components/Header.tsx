@@ -1,12 +1,17 @@
 import React from "react";
-import logo from "../assets/LOGO.svg";
+// Interfaces
+
+// Components
 import Navigation from "../components/Navigation";
-import styles from "./Header.module.css";
+// Styles
+import HeaderStyles from "./Header.module.css";
+import logo from "../assets/LOGO.svg";
+
 
 const Header: React.FC = () => {
     return (
-        <header className={styles.class}>
-            <figure className="headerWrap__fig">
+        <header className={HeaderStyles.headerWrap}>
+            <figure className={HeaderStyles.headerWrapFig}>
                 <img className="logo" src={logo} alt="logo de l'agence kasa" />
             </figure>
             <Navigation />

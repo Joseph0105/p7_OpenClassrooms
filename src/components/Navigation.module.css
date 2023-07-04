@@ -1,0 +1,42 @@
+:root {
+    --primary-color: #ff6060;
+}
+
+.navHeader {
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+    .navHeader {
+        text-transform: none;
+    }
+}
+
+.navHeaderLinkHome,
+.navHeaderLinkAbout {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding-left: 0.8rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .navHeaderLinkHome,
+    .navHeaderLinkAbout {
+        font-size: 24px;
+        line-height: 28px;
+        padding-left: 3.5rem;
+    }
+}
+
+.navHeaderLinkHome:hover,
+.navHeaderLinkHome:focus,
+.navHeaderLinkAbout:hover,
+.navHeaderLinkAbout:focus {
+    text-decoration: underline;
+}

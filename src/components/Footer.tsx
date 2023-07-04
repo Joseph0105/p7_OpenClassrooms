@@ -1,11 +1,13 @@
 import React from "react";
+// Styles
 import logo from "../assets/logo-footer.svg";
+import FooterStyles from "./Footer.module.css";
 
 const Footer: React.FC = () => {
     return (
-        <footer className="foot-container">
+        <footer className={FooterStyles.footContainer}>
             <img src={logo} alt="logo de kasa" />
-            <p className="foot-container__text">© 2023 Kasa. All rights reserved</p>
+            <p className={FooterStyles.footContainerText}>© 2023 Kasa. All rights reserved</p>
         </footer>
     );
 };
