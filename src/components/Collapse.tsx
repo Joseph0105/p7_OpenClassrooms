@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
+// Interfaces
 import { CollapseProps } from '../interfaces/Collapse';
+// Styles
 import Chevron from "../assets/vectorBas.svg";
+import CollapseStyle from "./Collapse.module.css";
 
 const Collapse: React.FC<CollapseProps> = ({ aboutStyle, aboutTitle, aboutText }) => {
     const [toggle, setToggle] = useState(false);
@@ -19,17 +22,17 @@ const Collapse: React.FC<CollapseProps> = ({ aboutStyle, aboutTitle, aboutText }
 
     return (
         <div className={`collapse ${aboutStyle}`}>
-            <div onClick={toggleState} className="collapse__visible">
+            <div onClick={toggleState} className={CollapseStyle.collapseVisible}>
                 <h2>{aboutTitle}</h2>
                 <img
-                    className={toggle ? "chevron rotated" : "chevron"}
+                    className={toggle ? CollapseStyle.chevron : CollapseStyle.rotated}
                     src={Chevron}
                     alt="chevron"
                 />
             </div>
             <div
                 ref={refHeight}
-                className={toggle ? "collapse__toggle animated" : "collapse__toggle"}
+                className={`${toggle ? CollapseStyle.collapseToggle : ''} ${CollapseStyle.animated}`}
                 style={{ height: toggle ? `${heightEl}` : "0px" }}
             >
                 <p aria-hidden={toggle ? "true" : "false"}>{aboutText}</p>

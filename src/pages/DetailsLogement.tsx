@@ -9,6 +9,16 @@ import Collapse from "../components/Collapse";
 import Host from "../components/Host";
 import Rate from "../components/Rate";
 import Tag from "../components/Tag";
+// Styles
+import CarrouselStyle from "../components/Carroussel.module.css";
+import CollapseStyle from "../components/Collapse.module.css";
+import HostStyle from "../components/Host.module.css";
+import RateStyle from "../components/Rate.module.css";
+import TagStyle from "../components/Tag.module.css";
+
+
+
+
 
 
 const DetailsLogement = () => {
@@ -50,44 +60,45 @@ const DetailsLogement = () => {
             </li>
         );
     });
-
+// COMMENT FAIRE SI 2 CLASSES A METTRE
     return (
         selectedAppart && (
-            <div key={params.id} className="fiche-container">
+            <div key={params.id} className="ficheContainer">
                 <Carrousel slides={slidePics ? slidePics : []} />
-                <section className="hostInfo-container">
-                    <div className="title-tags-container">
-                        <div className="title-container redFont">
+                <section className={HostStyle.hostInfoContainer}>
+                    <div className={TagStyle.titleTagsContainer}>
+                        <div className="titleContainer redFont">
                             <h1>{selectedAppart.title}</h1>
                             <h3>{selectedAppart.location}</h3>
                         </div>
-                        <div className="tags-container">
+                        <div className={TagStyle.tagsContainer}>
                             {tags || [].map((tag) => (
                                 <Tag key={tag} tag={tag} />
                             ))}
                         </div>
                     </div>
-                    <div className="rate-host-container">
-                        <div className="host-container redFont">
-                            <Host
-                                hostName={selectedAppart.host.name}
-                                hostPic={selectedAppart.host.picture}
-                                id={String(selectedAppart.id)}
-                            />
-                        </div>
-                        <div className="rate-container">
-                            <Rate score={selectedAppart.rating} />
-                        </div>
+                    <div className={HostStyle.rateHostContainer}>
+                        <div className={HostStyle.hostContainer}>
+                            
+                        <Host
+                            hostName={selectedAppart.host.name}
+                            hostPic={selectedAppart.host.picture}
+                            id={String(selectedAppart.id)}
+                        />
                     </div>
-                </section>
-                <div className="collapse-fiche-container">
-                    <Collapse
-                        aboutTitle="Description"
-                        aboutText={selectedAppart.description}
-                    />
-                    <Collapse aboutTitle="Équipements" aboutText={equip} />
-                </div>
+                    <div className={RateStyle.rateContainer}>
+                        <Rate score={selectedAppart.rating} />
+                    </div>
             </div>
+                </section >
+    <div className={CollapseStyle.collapseFicheContainer}>
+        <Collapse
+            aboutTitle="Description"
+            aboutText={selectedAppart.description}
+        />
+        <Collapse aboutTitle="Équipements" aboutText={equip} />
+    </div>
+            </div >
         )
     );
 }

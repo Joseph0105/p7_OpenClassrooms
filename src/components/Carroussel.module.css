@@ -1,0 +1,100 @@
+#carrouselContainer {
+    display: flex;
+    position: relative;
+    width: 90%;
+    height: 400px;
+    margin: 2% auto;
+    overflow: hidden;
+}
+
+@media screen and (min-width: var(--breakpoint-desktop)) {
+    #carrouselContainer {
+        height: 415px;
+    }
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity ease-in-out 0.4s; 
+}
+
+@media screen and (min-width: var(--breakpoint-desktop)) {
+    .slider {
+        border-radius: 28px;
+    }
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    mix-blend-mode: normal;
+    border-radius: 28px;
+}
+
+@media screen and (min-width: var(--breakpoint-desktop)) {
+    .slider img {
+        border-radius: 28px;
+    }
+}
+
+.sliderNumber {
+    display: none;
+}
+
+@media screen and (min-width: var(--breakpoint-desktop)) {
+    .sliderNumber {
+        display: block;
+        position: absolute;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%;
+        color: var(--tertiary-color);
+        left: 48%;
+        top: 86%;
+    }
+}
+
+.activeAnim {
+    opacity: 1;
+}
+
+.rightArrow {
+    display: flex;
+    position: absolute;
+    top: 47%;
+    right: 2%;
+    width: 12px;
+    height: 20px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.leftArrow {
+    display: flex;
+    position: absolute;
+    top: 47%;
+    left: 2%;
+    width: 12px;
+    height: 20px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+@media screen and (min-width: var(--breakpoint-desktop)) {
+    .rightArrow, .leftArrow {
+        width: 47px;
+        height: 79px;
+        top: 42%;
+    }
+}
