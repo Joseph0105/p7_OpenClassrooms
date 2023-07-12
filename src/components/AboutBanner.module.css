@@ -1,0 +1,31 @@
+.aboutBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/mobile-about-background.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 223px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 992px) {
+    .aboutBackground {
+        background-image: url("../assets/about-background.png");
+        border-radius: 15px;
+    }
+}
+
+.border {
+    border-radius: 25px;
+}
+
+@media screen and (min-width: 992px) {
+    .wh-msk {
+        border-radius: 15px;
+    }
+}
+

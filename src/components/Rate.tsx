@@ -4,27 +4,20 @@ import { RateProps } from "../interfaces/Rate";
 // Styles
 import emptyStar from "../assets/emptyStar.svg";
 import fullStar from "../assets/star-rate.svg";
+import RateStyle from "../components/Rate.module.css";
+
 
 const Rate: React.FC<RateProps> = ({ score }) => {
     const stars = [1, 2, 3, 4, 5];
     return (
-        <div className="rate-comp">
+        <div className={RateStyle.rateComp}>
             {stars.map((level) =>
-                score >= level ? (
-                    <img
-                        key={level.toString()}
-                        className="star"
-                        src={fullStar}
-                        alt="rating star"
-                    />
-                ) : (
-                    <img
-                        key={level.toString()}
-                        className="star"
-                        src={emptyStar}
-                        alt="rating star"
-                    />
-                )
+                <img
+                    key={level.toString()}
+                    className={RateStyle.star}
+                    src={score >= level ? fullStar : emptyStar}
+                    alt="rating star"
+                />
             )}
         </div>
     );

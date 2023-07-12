@@ -11,7 +11,8 @@ const Collapse: React.FC<CollapseProps> = ({ aboutStyle, aboutTitle, aboutText }
     const refHeight = useRef<HTMLDivElement>(null);
 
     const toggleState = () => {
-        setToggle(!toggle);
+        setToggle(prev => !prev)
+        // Pour pouvoir le faire 2 fois
     };
 
     useEffect(() => {
@@ -30,13 +31,14 @@ const Collapse: React.FC<CollapseProps> = ({ aboutStyle, aboutTitle, aboutText }
                     alt="chevron"
                 />
             </div>
-            <div
+            {toggle && <div
                 ref={refHeight}
                 className={`${toggle ? CollapseStyle.collapseToggle : ''} ${CollapseStyle.animated}`}
                 style={{ height: toggle ? `${heightEl}` : "0px" }}
             >
-                <p aria-hidden={toggle ? "true" : "false"}>{aboutText}</p>
+                <p>{aboutText}</p>
             </div>
+            }
         </div>
     );
 };

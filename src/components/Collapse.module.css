@@ -20,7 +20,8 @@
     padding: 7px 15px;
     border-radius: 5px;
     width: 97%;
-    font-size: 15px;
+    margin-top: 30px;
+
 }
 
 @media screen and (min-width: var(--breakpoint-desktop)) {
@@ -30,7 +31,7 @@
 }
 
 .collapseVisible h2 {
-    font-size: 13px;
+    font-size: 25px;
     font-weight: 500;
 }
 
@@ -41,19 +42,23 @@
 }
 
 .collapseToggle {
+    height: 0px;
     opacity: 0;
     color: var(--primary-color);
     background: var(--secondary-color);
     border-radius: 5px;
-    transition: opacity 0.4s ease-in-out, height 0.4s 0.4s ease-in-out;
+    transition: opacity 0.4s 0.4s ease-in-out, height 0.4s ease-in-out;  
 }
+
 
 .collapseToggle p {
     margin: 0;
+    margin-bottom: 10px;
     padding: 22px 15px;
     pointer-events: none;
-    font-size: 12px;
+    font-size: 24px;
     font-weight: 400;
+    list-style-type: none;
 }
 
 @media screen and (min-width: var(--breakpoint-desktop)) {
@@ -61,14 +66,24 @@
         font-size: 24px;
     }
 }
-
-.animated {
-    opacity: 1;
-    transition: height 0.4s ease-in-out, opacity 0.4s 0.4s ease-in-out;
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
+@keyframes marginIncrease {
+  0%   { margin-bottom: 0px; }
+  100% { margin-bottom: 200px; }
+}
+
+
+
+.animated {
+  animation: fadeIn 0.4s ease-in-out 0.4s forwards, marginIncrease 0.4s ease-in-out 0.4s forwards;
+}
+
+
 .chevron {
-    width: 9px;
     transform: rotate(0deg);
     transition: 0.4s 0.4s ease-in-out;
 }
@@ -95,11 +110,18 @@
         width: 87.5%;
     }
 }
+.collapseContainer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+
+}
 
 .collapseFicheContainer {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 40%;
+    font-size: 25px;
 }
 
 @media screen and (min-width: var(--breakpoint-desktop)) {

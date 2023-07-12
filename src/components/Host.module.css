@@ -7,8 +7,8 @@
 .hostPicture {
     display: flex;
     margin-left: 10px;
-    width: 32px;
-    height: 32px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     background: #c4c4c4;
 }
@@ -35,26 +35,36 @@
 .hostName @media screen and (min-width: 769px) {
     font-size: 18px;
 }
-
 .rateHostContainer {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
 }
 
-.rateHostContainer @media screen and (min-width: 769px) {
+.HostContainer {
+    display: flex;
+    justify-content: space-between;
+    justify-content: end;
+}
+
+.HostContainer @media screen and (min-width: 769px) {
     flex-direction: column;
     justify-content: center;
 }
 
 .hostInfoContainer {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 30px;
     justify-content: space-between;
 }
 
 .hostInfoContainer @media screen and (min-width: 769px) {
     flex-direction: row;
     align-items: flex-end;
+}
+
+.ficheContainer {
 }

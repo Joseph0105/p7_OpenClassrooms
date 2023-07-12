@@ -1,0 +1,11 @@
+.aboutContainer {
+ margin: 5%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+.collapseContainer {
+    margin-top: 30px;
+    
+}
