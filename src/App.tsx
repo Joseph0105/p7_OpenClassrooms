@@ -4,10 +4,13 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import DetailsLogement from "./pages/DetailsLogement";
 import About from "./pages/About";
+import Error from "./pages/Error";
 // Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+// Notes PAUL
+// Faire un style global (margin, font, color etc...)
 
 const App: React.FC = () => {
     return (
@@ -18,6 +21,7 @@ const App: React.FC = () => {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/logement/:id" element={<DetailsLogement />} />
                     <Route path="/about" element={<About />} />
+                    <Route path="*" element={<Error />} />
 
                 </Routes>
             </main>
