@@ -8,9 +8,15 @@ import Error from "./pages/Error";
 // Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+// Style
+import "./App.css";
 
-// Notes PAUL
-// Faire un style global (margin, font, color etc...)
+// Responsive pour collapse ficheLogement
+// Style des collpases
+// Le normalize css
+// mettre un max width au body
+// Passer en revue le code inutile
+// Checker le about
 
 const App: React.FC = () => {
     return (

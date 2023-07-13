@@ -60,11 +60,7 @@ const DetailsLogement = () => {
             </li>
         );
     });
-    // COMMENT FAIRE SI 2 CLASSES A METTRE
-    // className={`${styles.azerty} ${styles.qwerty}`}
-
-    // null undefined 0 "" => ||
-    // null undefined => ??
+    
     return (
         selectedAppart && (
             <div key={params.id} className={HostStyle.ficheContainer}>

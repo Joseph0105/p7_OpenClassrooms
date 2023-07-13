@@ -7,19 +7,19 @@ import CollapseStyle from "./Collapse.module.css";
 
 const Collapse: React.FC<CollapseProps> = ({ aboutStyle, aboutTitle, aboutText }) => {
     const [toggle, setToggle] = useState(false);
-    const [heightEl, setHeightEl] = useState("0px");
-    const refHeight = useRef<HTMLDivElement>(null);
+    // const [heightEl, setHeightEl] = useState("0px");
+    // const refHeight = useRef<HTMLDivElement>(null);
 
     const toggleState = () => {
         setToggle(prev => !prev)
         // Pour pouvoir le faire 2 fois
     };
 
-    useEffect(() => {
-        if (refHeight.current) {
-            setHeightEl(`${refHeight.current.scrollHeight}px`);
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (refHeight.current) {
+    //         setHeightEl(`${refHeight.current.scrollHeight}px`);
+    //     }
+    // }, []);
 
     return (
         <div className={`collapse ${aboutStyle}`}>
@@ -32,9 +32,9 @@ const Collapse: React.FC<CollapseProps> = ({ aboutStyle, aboutTitle, aboutText }
                 />
             </div>
             {toggle && <div
-                ref={refHeight}
+                // ref={refHeight}
                 className={`${toggle ? CollapseStyle.collapseToggle : ''} ${CollapseStyle.animated}`}
-                style={{ height: toggle ? `${heightEl}` : "0px" }}
+            // style={{ height: toggle ? `${heightEl}` : "0px" }}
             >
                 <p>{aboutText}</p>
             </div>
