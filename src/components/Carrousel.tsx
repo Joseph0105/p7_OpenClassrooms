@@ -40,8 +40,9 @@ const Carrousel: React.FC<CarrouselProps> = ({ slides }) => {
             )}
             {slides.map((slide, index) => (
                 <div
-                    key={index} // mise en place du slider avec affichage conditionnel et opacity=1 quand le slide en cours vaut l'index
-                    className={CarrousselStyle.slider + " " + CarrousselStyle.blMsk + " " + CarrousselStyle.whMsk + (current === index ? " " + CarrousselStyle.activeAnim : "")}
+                    key={index}
+                    className={current === index ? CarrousselStyle.slider + " " + CarrousselStyle.blMsk + " " + CarrousselStyle.whMsk + " " + CarrousselStyle.activeAnim : CarrousselStyle.slider + " " + CarrousselStyle.blMsk + " " + CarrousselStyle.whMsk}
+
 
                 >
                     {index === current && <img src={slide} alt="appartement à louer" />}
@@ -51,8 +52,9 @@ const Carrousel: React.FC<CarrouselProps> = ({ slides }) => {
                         </span>
                     )}
                 </div>
-            ))}
-        </section>
+            ))
+            }
+        </section >
     );
 }
 

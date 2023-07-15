@@ -16,11 +16,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 30px;
+    height: 35px;
     padding: 7px 15px;
     border-radius: 5px;
-    width: 97%;
-    margin-top: 30px;
+    margin-top: 25px
 
 }
 
@@ -105,23 +104,31 @@
 }
 .collapseContainer {
     display: flex;
-    justify-content: space-around;
     font-size: 25px;
-
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 5%;
 }
 
 .collapseFicheContainer {
     display: flex;
     flex-direction: column;
-    width: 40%;
     font-size: 25px;
+    width: 50%;
 }
 
-@media screen and (min-width: var(--breakpoint-desktop)) {
-    .collapseFicheContainer {
-        flex-direction: row;
-        /* gap: 6%; */
+@media screen and (max-width: 768px) {
+   
+    .collapseContainer{
+        flex-direction: column;
+     
     }
+    .collapseFicheContainer {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    width: 100%;
+}
 }
 
 .equipList {

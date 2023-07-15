@@ -10,13 +10,11 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 // Style
 import "./App.css";
+import "./normalize.css"
 
-// Responsive pour collapse ficheLogement
-// Style des collpases
-// Le normalize css
-// mettre un max width au body
 // Passer en revue le code inutile
 // Checker le about
+// Parler de useEffect
 
 const App: React.FC = () => {
     return (

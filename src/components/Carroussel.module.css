@@ -47,15 +47,11 @@
     }
 }
 
-.sliderNumber {
-    display: none;
-}
 
-@media screen and (min-width: var(--breakpoint-desktop)) {
-    .sliderNumber {
+  .sliderNumber {
         display: block;
         position: absolute;
-        font-size: 18px;
+        font-size: 20px;
         font-style: normal;
         font-weight: 500;
         line-height: 142.6%;
@@ -63,6 +59,11 @@
         left: 48%;
         top: 86%;
     }
+
+@media screen and (min-width: var(--breakpoint-desktop)) {
+  .sliderNumber {
+    display: none;
+}
 }
 
 .activeAnim {
@@ -72,10 +73,10 @@
 .rightArrow {
     display: flex;
     position: absolute;
-    top: 47%;
+    top: 45%;
     right: 2%;
-    width: 12px;
-    height: 20px;
+    width: 70px;
+    height: 70px;
     z-index: 10;
     cursor: pointer;
 }
@@ -83,10 +84,10 @@
 .leftArrow {
     display: flex;
     position: absolute;
-    top: 47%;
+    top: 45%; 
     left: 2%;
-    width: 12px;
-    height: 20px;
+    width: 70px;
+    height: 70px;
     z-index: 10;
     cursor: pointer;
 }
