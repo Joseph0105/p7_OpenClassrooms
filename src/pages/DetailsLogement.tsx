@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 // Interfaces
-import { HostInterface, Appartment } from "../interfaces/DetailsLogement";
+import { Appartment } from "../interfaces/DetailsLogement";
 // Components
 import Carrousel from "../components/Carrousel";
 import Collapse from "../components/Collapse";
@@ -10,7 +10,6 @@ import Host from "../components/Host";
 import Rate from "../components/Rate";
 import Tag from "../components/Tag";
 // Styles
-import CarrouselStyle from "../components/Carroussel.module.css";
 import CollapseStyle from "../components/Collapse.module.css";
 import HostStyle from "../components/Host.module.css";
 import RateStyle from "../components/Rate.module.css";
@@ -48,7 +47,7 @@ const DetailsLogement = () => {
                 });
         };
         getData();
-    }, []); // array vide du useEffect pour ne lancer qu'une seule fois
+    }, []);
 
     const slidePics = selectedAppart && selectedAppart.pictures;
     const tags = selectedAppart && selectedAppart.tags;

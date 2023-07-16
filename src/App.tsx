@@ -12,11 +12,7 @@ import Footer from "./components/Footer";
 import "./App.css";
 import "./normalize.css"
 
-// Passer en revue le code inutile
-// Checker le about
-// Parler de useEffect
-
-const App: React.FC = () => {
+const App = () => {
     return (
         <div className="App">
             <Header />

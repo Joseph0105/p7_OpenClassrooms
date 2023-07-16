@@ -7,16 +7,14 @@ import left from "../assets/vector-left.svg";
 import right from "../assets/vector-right.svg";
 import CarrousselStyle from "./Carroussel.module.css";
 
-// REACT.Fc permet d'avoir des childrens
 const Carrousel: React.FC<CarrouselProps> = ({ slides }) => {
-    const [current, setCurrent] = useState(0); //je définis l'index du premier slide à 0
-    const length = slides.length; // longueur du tableau de slides
+    const [current, setCurrent] = useState(0);
 
     const nextSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1); // on repart au premier slide quand on arrive au dernier
+        setCurrent(current === length - 1 ? 0 : current + 1);
     };
     const prevSlide = () => {
-        setCurrent(current === 0 ? length - 1 : current - 1); // on repart au dernier slide quand on est au premier
+        setCurrent(current === 0 ? length - 1 : current - 1);
     };
 
     return (
@@ -24,7 +22,7 @@ const Carrousel: React.FC<CarrouselProps> = ({ slides }) => {
             {length > 1 && (
                 <>
                     <img
-                        src={left} //Affichage des flèches seulement si length > 1
+                        src={left} 
                         alt="gauche"
                         onClick={prevSlide}
                         className={CarrousselStyle.leftArrow}
