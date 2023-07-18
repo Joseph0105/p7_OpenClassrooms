@@ -9,8 +9,8 @@ import Error from "./pages/Error";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 // Style
-import "./App.css";
 import "./normalize.css"
+import "./App.css";
 
 const App = () => {
     return (

@@ -1,6 +1,4 @@
 import React from "react";
-// Interfaces
-
 // Components
 import Navigation from "../components/Navigation";
 // Styles
@@ -8,7 +6,7 @@ import HeaderStyles from "./Header.module.css";
 import logo from "../assets/LOGO.svg";
 
 
-const Header: React.FC = () => {
+const Header = () => {
     return (
         <header className={HeaderStyles.headerWrap}>
             <figure className={HeaderStyles.headerWrapFig}>
